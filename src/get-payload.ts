@@ -1,21 +1,21 @@
 import dotenv from "dotenv";
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 import path from "path";
 import payload, { Payload } from "payload";
-import type { InitOptions } from "payload/config";
+import type { InitOptions } from "payload";
 
 // Load environment variables from .env file
 dotenv.config({
-    path: path.resolve(__dirname, '../.env'),
+    path: path.resolve(__dirname, "../.env"),
 });
 
 // Create nodemailer transporter
 const transporter = nodemailer.createTransport({
-    host: 'smtp.resend.com',
+    host: "smtp.resend.com",
     port: 465,
     secure: true, // Use SSL
     auth: {
-        user: 'resend',
+        user: "resend",
         pass: process.env.RESEND_API_KEY,
     },
 });
@@ -48,12 +48,12 @@ export const getPayloadClient = async ({ initOptions }: Args = {}): Promise<Payl
         cached.promise = payload.init({
             email: {
                 transport: transporter,
-                fromAddress:'onboarding@resend.dev',
+                fromAddress: "onboarding@resend.dev",
                 fromName: "FarmConnect",
             },
             secret: process.env.PAYLOAD_SECRET,
-            local: initOptions?.express ? false : true,
-            ...(initOptions || {}), // Pass initOptions directly
+            local: true, // Explicitly set to `true` for local development
+            ...initOptions, // Pass additional init options
         });
     }
 

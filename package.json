@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.6.0",
-    "@payloadcms/bundler-webpack": "^1.0.7",
-    "@payloadcms/db-mongodb": "^1.5.2",
-    "@payloadcms/richtext-slate": "^1.5.2",
+    "@payloadcms/bundler-webpack": "^1.0.3",
+    "@payloadcms/db-mongodb": "^3.2.1",
+    "@payloadcms/next": "^3.5.0",
+    "@payloadcms/richtext-lexical": "^3.5.0",
+    "@payloadcms/richtext-slate": "^3.2.1",
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.1",
@@ -32,17 +34,19 @@
     "clsx": "^2.1.1",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "express": "^4.21.2",
     "framer-motion": "^11.2.13",
     "framer-motion-3d": "^11.2.13",
+    "graphql": "^16.9.0",
     "lucide-react": "^0.396.0",
-    "next": "14.2.4",
+    "next": "^14.2.18",
     "nodemailer": "^6.9.14",
-    "payload": "^2.22.0",
+    "payload": "^3.5.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.52.0",
     "resend": "^3.4.0",
+    "sharp": "^0.33.5",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
@@ -50,8 +54,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.14.8",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.1",
     "@types/nodemailer": "^6.4.15",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -61,6 +65,6 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.2"
+    "typescript": "^5.7.2"
   }
 }

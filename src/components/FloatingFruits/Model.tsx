@@ -70,6 +70,6 @@ const Mesh: React.FC<MeshProps> = ({ node , multiplier, mouse})  => {
   );
 };
 
-useGLTF.preload('/medias/untitled.glb');
+useGLTF.preload('/untitled.glb');
 
 export default Model;

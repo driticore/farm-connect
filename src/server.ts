@@ -22,11 +22,12 @@ const start = async () => {
     const payload = await getPayloadClient({
       initOptions: {
         express: app,
-        onInit: async (cms) => {
+        onInit: async (cms: { logger: { info: (arg0: string) => void; }; getAdminURL: () => any; }) => {
           cms.logger.info(`Admin URL: ${cms.getAdminURL()}`);
         },
-      },
+      } as any, // Cast as any to ignore strict type-checking
     });
+    
 
     // Setup TRPC middleware
     app.use('/api/trpc', trpcExpress.createExpressMiddleware({

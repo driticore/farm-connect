@@ -3,7 +3,7 @@ import { mongooseAdapter } from "@payloadcms/db-mongodb"
 import { slateEditor } from "@payloadcms/richtext-slate"
 import dotenv from "dotenv"
 import path from "path"
-import { buildConfig } from "payload/config"
+import { buildConfig } from "payload"
 import { Users } from "./collections/Users"
 
 dotenv.config({

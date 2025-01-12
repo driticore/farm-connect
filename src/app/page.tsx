@@ -40,7 +40,7 @@ const Home = () => {
       <MaxWidthWrapper className="min-w-full min-h-[87.5vh] relative">
         
         <div className="py-20 mx-auto text-center flex flex-col items-center max-w-4xl relative">
-          //Heading - Hook
+
           <h1 className="text-4xl font-bold tracking-tight text-gray-900">
             Discover Your Perfect Harvest: FarmConnect - Your Gateway to{" "}
             <span className="text-green-800">
@@ -48,13 +48,13 @@ const Home = () => {
             </span>
             .
           </h1>
-          //Subheading
+
           <p className="mt-6 text-lg max-w-prose">
-            Showcase your farm's products, connect with potential buyers, and effortlessly track your sales.
+            Showcase your farm&apos;s products, connect with potential buyers, and effortlessly track your sales.
             Join our community today and be part of the future of farming!
           </p>
 
-          //Buttons
+
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Link href="/products" passHref>
               <Button className={cn(buttonVariants(), "bg-black")}>
